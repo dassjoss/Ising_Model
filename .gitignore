@@ -56,7 +56,6 @@ output/
 *.png
 *.jpg
 *.jpeg
-*.pdf
 *.svg
 figures/
 

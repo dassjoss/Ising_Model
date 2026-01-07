@@ -1,152 +1,157 @@
-# Modelo de Ising en Diferentes Topologías
+# Ising Model in Different Topologies
 
-Este proyecto contiene implementaciones del **Modelo de Ising** en diversas topologías de red, con simulaciones Monte Carlo y análisis de propiedades termodinámicas.
+This project contains implementations of the **Ising Model** in various network topologies, with Monte Carlo simulations and thermodynamic property analysis.
 
-## 📋 Descripción
+## 📄 Publications
 
-El Modelo de Ising es un modelo matemático de ferromagnetismo en mecánica estadística. Este repositorio incluye simulaciones en las siguientes topologías:
+- **English Version**: See `Ising_English_Version` for the article in English
+- **Spanish Version**: See `Articulo.pdf` for the article in Spanish
 
-- **Lineal (1D)**: Cadena unidimensional
-- **Cuadrada (2D)**: Red cuadrada bidimensional
-- **Cúbica (3D)**: Red cúbica tridimensional
-- **Honeycomb (2D)**: Red hexagonal (panal de abeja)
+## 📋 Description
 
-## 🔬 Características
+The Ising Model is a mathematical model of ferromagnetism in statistical mechanics. This repository includes simulations in the following topologies:
 
-- Simulaciones Monte Carlo con algoritmo de Metrópolis
-- Análisis de transiciones de fase
-- Cálculo de propiedades termodinámicas (energía, magnetización, calor específico, susceptibilidad)
-- Visualizaciones de configuraciones del sistema
-- Optimización con Numba para cálculos rápidos
+- **Linear (1D)**: One-dimensional chain
+- **Square (2D)**: Two-dimensional square lattice
+- **Cubic (3D)**: Three-dimensional cubic lattice
+- **Honeycomb (2D)**: Hexagonal lattice (honeycomb)
 
-## 📁 Estructura del Proyecto
+## 🔬 Features
+
+- Monte Carlo simulations with Metropolis algorithm
+- Phase transition analysis
+- Calculation of thermodynamic properties (energy, magnetization, specific heat, susceptibility)
+- System configuration visualizations
+- Optimization with Numba for fast computations
+
+## 📁 Project Structure
 
 ```
 Ising_Model/
 ├── notebooks/
-│   ├── ising_lineal.ipynb      # Simulación en red lineal
-│   ├── ising_cuadrada.ipynb    # Simulación en red cuadrada
-│   ├── ising_cubica.ipynb      # Simulación en red cúbica
-│   └── ising_honeycomb.ipynb   # Simulación en red honeycomb
-├── requirements.txt            # Dependencias del proyecto
-├── LICENSE                     # Licencia del proyecto
-└── README.md                   # Este archivo
+│   ├── ising_lineal.ipynb      # Linear lattice simulation
+│   ├── ising_cuadrada.ipynb    # Square lattice simulation
+│   ├── ising_cubica.ipynb      # Cubic lattice simulation
+│   └── ising_honeycomb.ipynb   # Honeycomb lattice simulation
+├── requirements.txt            # Project dependencies
+├── LICENSE                     # Project license
+└── README.md                   # This file
 ```
 
-## 🚀 Instalación
+## 🚀 Installation
 
-### Prerrequisitos
+### Prerequisites
 
-- Python 3.7 o superior
-- pip (gestor de paquetes de Python)
+- Python 3.7 or higher
+- pip (Python package manager)
 
-### Pasos de instalación
+### Installation Steps
 
-1. Clona el repositorio:
+1. Clone the repository:
 ```bash
-git clone https://github.com/tu-usuario/Ising_Model.git
+git clone https://github.com/your-username/Ising_Model.git
 cd Ising_Model
 ```
 
-2. (Opcional) Crea un entorno virtual:
+2. (Optional) Create a virtual environment:
 ```bash
 python -m venv venv
-source venv/bin/activate  # En Linux/Mac
-# o
-venv\Scripts\activate     # En Windows
+source venv/bin/activate  # On Linux/Mac
+# or
+venv\Scripts\activate     # On Windows
 ```
 
-3. Instala las dependencias:
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## 💻 Uso
+## 💻 Usage
 
-### Ejecutar los notebooks
+### Running the notebooks
 
-1. Inicia Jupyter Notebook:
+1. Start Jupyter Notebook:
 ```bash
 jupyter notebook
 ```
 
-2. Navega a la carpeta `notebooks/` y abre el notebook que desees explorar.
+2. Navigate to the `notebooks/` folder and open the notebook you want to explore.
 
-3. Ejecuta las celdas secuencialmente para ver las simulaciones y resultados.
+3. Run the cells sequentially to see the simulations and results.
 
-### Notebooks disponibles
+### Available Notebooks
 
 #### 🔗 ising_lineal.ipynb
-Simulación del Modelo de Ising en una cadena unidimensional. Incluye:
-- Sistema diluido con probabilidad de ocupación
-- Análisis de magnetización vs temperatura
-- Estudio de transiciones de fase en 1D
+Ising Model simulation on a one-dimensional chain. Includes:
+- Diluted system with occupation probability
+- Magnetization vs temperature analysis
+- Study of phase transitions in 1D
 
 #### ⬜ ising_cuadrada.ipynb
-Simulación del Modelo de Ising en una red cuadrada 2D. Incluye:
-- Algoritmo de Metrópolis para evolución del sistema
-- Visualización de configuraciones de spins
-- Cálculo de temperatura crítica
-- Análisis de propiedades termodinámicas
+Ising Model simulation on a 2D square lattice. Includes:
+- Metropolis algorithm for system evolution
+- Spin configuration visualization
+- Critical temperature calculation
+- Thermodynamic property analysis
 
 #### 🧊 ising_cubica.ipynb
-Simulación del Modelo de Ising en una red cúbica 3D. Incluye:
-- Implementación 3D del algoritmo Monte Carlo
-- Análisis de fenómenos críticos en 3D
-- Visualización de propiedades estadísticas
+Ising Model simulation on a 3D cubic lattice. Includes:
+- 3D implementation of Monte Carlo algorithm
+- Analysis of critical phenomena in 3D
+- Statistical property visualization
 
 #### 🔶 ising_honeycomb.ipynb
-Simulación del Modelo de Ising en una red hexagonal (honeycomb). Incluye:
-- Construcción de topología honeycomb
-- Análisis de coordinación diferente (z=3)
-- Comparación con otras topologías
+Ising Model simulation on a hexagonal (honeycomb) lattice. Includes:
+- Honeycomb topology construction
+- Different coordination analysis (z=3)
+- Comparison with other topologies
 
-## 📊 Propiedades Calculadas
+## 📊 Calculated Properties
 
-Los notebooks calculan las siguientes propiedades termodinámicas:
+The notebooks calculate the following thermodynamic properties:
 
-- **Energía**: Energía total del sistema
-- **Magnetización**: Momento magnético promedio
-- **Calor Específico**: Capacidad calorífica del sistema
-- **Susceptibilidad Magnética**: Respuesta del sistema a campos magnéticos
-- **Correlaciones**: Funciones de correlación espacial
+- **Energy**: Total system energy
+- **Magnetization**: Average magnetic moment
+- **Specific Heat**: Heat capacity of the system
+- **Magnetic Susceptibility**: System response to magnetic fields
+- **Correlations**: Spatial correlation functions
 
-## 🔧 Tecnologías Utilizadas
+## 🔧 Technologies Used
 
-- **NumPy**: Cálculos numéricos y arrays
-- **Matplotlib**: Visualización de datos
-- **Numba**: Compilación JIT para optimización de rendimiento
-- **Jupyter**: Notebooks interactivos
+- **NumPy**: Numerical computations and arrays
+- **Matplotlib**: Data visualization
+- **Numba**: JIT compilation for performance optimization
+- **Jupyter**: Interactive notebooks
 
-## 📖 Referencias
+## 📖 References
 
 - Ising, E. (1925). "Beitrag zur Theorie des Ferromagnetismus"
 - Metropolis, N. et al. (1953). "Equation of State Calculations by Fast Computing Machines"
 - Onsager, L. (1944). "Crystal Statistics. I. A Two-Dimensional Model with an Order-Disorder Transition"
 
-## 📝 Licencia
+## 📝 License
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## 🤝 Contribuciones
+## 🤝 Contributions
 
-Las contribuciones son bienvenidas. Por favor:
+Contributions are welcome. Please:
 
-1. Haz fork del proyecto
-2. Crea una rama para tu función (`git checkout -b feature/nueva-funcion`)
-3. Commit de tus cambios (`git commit -am 'Añadir nueva función'`)
-4. Push a la rama (`git push origin feature/nueva-funcion`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Open a Pull Request
 
-## 👤 Autor
+## 👤 Author
 
-Tu Nombre - [@tu-usuario](https://github.com/tu-usuario)
+Your Name - [@your-username](https://github.com/your-username)
 
-## ⭐ Agradecimientos
+## ⭐ Acknowledgments
 
-- A la comunidad de física estadística y mecánica computacional
-- A los desarrolladores de NumPy, Matplotlib y Numba por sus excelentes herramientas
+- To the statistical physics and computational mechanics community
+- To the developers of NumPy, Matplotlib, and Numba for their excellent tools
 
 ---
 
-**Nota**: Este proyecto es con fines educativos y de investigación en física estadística.
+**Note**: This project is for educational and research purposes in statistical physics.
