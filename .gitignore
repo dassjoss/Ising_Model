@@ -52,13 +52,6 @@ data/
 results/
 output/
 
-# Plots y figuras
-*.png
-*.jpg
-*.jpeg
-*.svg
-figures/
-
 # Sistema
 .cache/
 .pytest_cache/
